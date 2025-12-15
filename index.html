@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>随机抽数字</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #number {
+            font-size: 60px;
+            margin: 30px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>随机抽取 1～50</h1>
+<div id="number">—</div>
+<button onclick="draw()">抽取</button>
+
+<script>
+    function draw() {
+        const result = Math.floor(Math.random() * 50) + 1;
+        document.getElementById("number").innerText = result;
+    }
+</script>
+
+</body>
+</html>
